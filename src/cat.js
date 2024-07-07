@@ -1,54 +1,67 @@
+var escala = 0.5
+
 function setup() {
-    createCanvas(400, 400);
-}
+    // createCanvas(1678*escala, 800*escala);
+    let canvas =createCanvas(430,430);
+    canvas.parent('screen');
+    // translate(windowWidth/2,windowHeight/4);
+    draw();
+}   
+
+
 
 function draw() {
-    background(220);
-    drawCat();
-}
+   
+    scale(escala);
 
-function drawCat() {
-    // Cuerpo
-    fill(150);
-    ellipse(200, 300, 150, 100); // cuerpo
+    // background(114,79,156);
+    background(148,251,255);
 
-    // Cabeza
-    ellipse(200, 200, 100, 100); // cabeza
+    // fill(148,251,255);
+    // rect(100,100,1478,600);
 
-    // Orejas
-    triangle(170, 160, 190, 120, 210, 160); // oreja izquierda
-    triangle(230, 160, 210, 120, 190, 160); // oreja derecha
+    var x = 430
+    var y = 430
+    var cat_color = [255,255,0]
+    var mouth = 70
 
-    // Ojos
-    fill(255);
-    ellipse(180, 190, 20, 20); // ojo izquierdo
-    ellipse(220, 190, 20, 20); // ojo derecho
+    // Ears
+    fill(200);
+    triangle(x-170,y-250,x-200,y-20,x+50,y-120);
+    triangle(x+170,y-250,x+200,y-20,x-50,y-120);
+    // pushMatrix();
+    // rotate(2);
+    fill(200,100,100);
+    ellipse(x-130,y-150,50,100);
+    ellipse(x+140,y-150,50,100);
+    // popMatrix();
+    
+
+    
+    // Head
+    fill(cat_color)
+    ellipse(x, y, 400, 400);
+
+    // Eyes
     fill(0);
-    ellipse(180, 190, 10, 10); // pupila izquierda
-    ellipse(220, 190, 10, 10); // pupila derecha
+    ellipse(x-80,y-50,50,50);
+    ellipse(x+80,y-50,50,50);
 
-    // Nariz
-    fill(255, 0, 0);
-    triangle(195, 210, 205, 210, 200, 220); // nariz
+    // Mouth
+    fill(255,0,0)
+    arc(x,y+mouth,100,80,0,3);
 
-    // Boca
-    noFill();
-    arc(200, 230, 20, 20, 0, PI); // boca
+    // Nose
+    fill(0)
+    triangle(x-30,y,x+30,y,x,y+60);
+    fill(cat_color)
+    strokeWeight(10);
+    arc(x-35,y+60,70,70,0,3.15);
+    arc(x+35,y+60,70,70,0,3.15);
 
-    // Bigotes
-    line(170, 220, 190, 215); // bigote izquierdo 1
-    line(170, 225, 190, 220); // bigote izquierdo 2
-    line(210, 215, 230, 220); // bigote derecho 1
-    line(210, 220, 230, 225); // bigote derecho 2
 
-    // Cola
-    noFill();
-    beginShape();
-    curveVertex(275, 300);
-    curveVertex(275, 300);
-    curveVertex(350, 250);
-    curveVertex(340, 200);
-    curveVertex(320, 170);
-    curveVertex(320, 170);
-    endShape();
+
 }
+
+
+
