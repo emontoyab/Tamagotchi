@@ -1,46 +1,76 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
-  }
-  
-  #background{
-    background-color: darkkhaki(15, 216, 65);
+    height: 100%;
+    background-color: beige;
+}
+
+#background-1 {
+    background-color: beige;
     display: flex;
     justify-content: center;
     align-content: center;
-  }
+}
 
-  #container {
+#container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     /* background-color: black; */
-    /* margin: 100px */ 
+    /* margin: 100px  */
     background: #724f9c;
     width: 550px;
     height: 650px;
     padding: 5%;
-    box box-sizing: border-box;
     border-radius: 600px / 820px 820px 600px 600px;
-    box-shadow: 
+    box-shadow:
         0 0 20px #000000bf,
         0 0 40px 15px #00000040 inset;
-        border: 1px solid black;
-    }
+    /* border: 10px solid black; */
+}
 
-    #screen{
+#screen {
+    height: 400px;
     justify-content: center;
-    margin: 100px 0 0 0;
+    margin: 50px 0 0 0;
     border: 10px solid black;
-        
-    }
 
-  #buttons{
-    /* display: flex; */
-    /* justify-content:flex-end; */
+}
+
+#buttons {
+    width: 350px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
     /* align-items: flex-end; */
-    background: yellow;
-    padding: 20px;
-    margin:50px
-  }
+    /* background: yellow; */
+    padding: 20px 0 0 0;
+    /* margin:30px */
+}
+
+#dormir{
+    align-self: flex-end;
+}
+
+button {
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    background: gold;
+    box-shadow: 
+    0 0 4px 2px #000000bf,
+    -2px -2px 4px rgba(0,0,0,0.5) inset;
+}
+
+#mensaje {
+    width: min-content:400px;
+    background-color: white;
+    font-family: monospace;
+    font-size: xx-large;
+    border: 10px solid black;
+    /* margin: 10px; */
+    /* padding: 10px 0px 10px 0px; */
+
+}

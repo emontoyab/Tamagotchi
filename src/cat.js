@@ -2,7 +2,7 @@ var escala = 0.5
 
 function setup() {
     // createCanvas(1678*escala, 800*escala);
-    let canvas =createCanvas(430,430);
+    let canvas =createCanvas(400,400);
     canvas.parent('screen');
     // translate(windowWidth/2,windowHeight/4);
     draw();
