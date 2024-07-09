@@ -31,10 +31,17 @@ body {
     /* border: 10px solid black; */
 }
 
+#score{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    /* border : 3px solid black; */
+}
+
 #screen {
     height: 400px;
     justify-content: center;
-    margin: 50px 0 0 0;
+    /* margin: 50px 0 0 0; */
     border: 10px solid black;
 
 }

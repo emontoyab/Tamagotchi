@@ -5,19 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tamagotchi</title>
+    <link rel="icon" type="image/png" href="https://thumbs.dreamstime.com/b/image-red-tamagotchi-vector-illustration-259471661.jpg">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
 
     <!-- <p style="font-size: xx-large;">Hola mundo</p> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="cat.js"></script>
-    <script src="tamagotchi.js"></script>
-    <script src="main.js"></script>
 
     <section id="background-1">
         <div id="container">
+            <div id="score">
+                <h3 id="happiness">Felicidad: 10</h3>
+                <h3 id="energy">Energía: 10</h3>
+                <h3 id="hunger">Hambre: 0</h3>
+            </div>
             <div id="screen">
           
             </div>  
@@ -25,11 +27,15 @@
             <div id="buttons">
                 <button value="Jugar" onclick="accionar(this)">Jugar</button>
                 <button id="dormir" value="Dormir" onclick="accionar(this)">Dormir</button>
-                <button>Comer</button>
+                <button value="Comer" onclick="accionar(this)">Comer</button>
             </div>
         </div>
 
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="cat.js"></script>
+    <script src="tamagotchi.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

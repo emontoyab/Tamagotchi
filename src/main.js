@@ -2,11 +2,15 @@ var pet, f, h, e;
 
 function setear(){
     f = 10;
-    h = 5;
-    e = 8;
-    s = 5;
+    h = 0;
+    e = 10;
 
-    pet = new Tamagotchi (h, f , e, s, document.getElementById("mensaje"));
+    let mensaje = document.getElementById("mensaje");
+    let happiness = document.getElementById("happiness");
+    let energy = document.getElementById("energy");
+    let hunger = document.getElementById("hunger");
+
+    pet = new Tamagotchi (h, f , e, mensaje, happiness, energy, hunger);
     setInterval(bore,5000);
 }
 
@@ -23,6 +27,9 @@ function accionar(boton) {
             break;
         case "Dormir":
             pet.dormir();
+            break;
+        case "Comer":
+            pet.comer();
             break;
 
     }
