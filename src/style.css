@@ -72,7 +72,7 @@ button {
 }
 
 #mensaje {
-    width: min-content:400px;
+    width: min-content 400px;
     background-color: white;
     font-family: monospace;
     font-size: xx-large;
@@ -80,4 +80,8 @@ button {
     /* margin: 10px; */
     /* padding: 10px 0px 10px 0px; */
 
+}
+
+#mensaje.alerta {
+    background-color: red;
 }

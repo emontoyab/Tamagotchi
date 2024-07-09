@@ -1,4 +1,13 @@
 var escala = 0.5
+var jugando = false;
+var durmiendo = false;
+var comiendo = false;
+var x = 430;
+var y = 430;
+var cat_color = [255,255,0];
+var mouth = 70;
+var back_color = [148,251,255];
+var eyes = 50;
 
 function setup() {
     // createCanvas(1678*escala, 800*escala);
@@ -13,17 +22,24 @@ function setup() {
 function draw() {
    
     scale(escala);
-
+    background(back_color);
     // background(114,79,156);
-    background(148,251,255);
+  
+    if (durmiendo){
+        background(0);
+        cat_color = [200,200,200];
+        eyes = 0;
+        text("💤", random(width+430),random(height+430));
+        textSize(100);
+    };
 
     // fill(148,251,255);
     // rect(100,100,1478,600);
 
-    var x = 430
-    var y = 430
-    var cat_color = [255,255,0]
-    var mouth = 70
+    if (jugando) {
+        x = random(width + 430);  
+        y = random(height + 430); 
+            }
 
     // Ears
     fill(200);
@@ -44,8 +60,8 @@ function draw() {
 
     // Eyes
     fill(0);
-    ellipse(x-80,y-50,50,50);
-    ellipse(x+80,y-50,50,50);
+    ellipse(x-80,y-50,50,eyes);
+    ellipse(x+80,y-50,50,eyes);
 
     // Mouth
     fill(255,0,0)
@@ -59,9 +75,41 @@ function draw() {
     arc(x-35,y+60,70,70,0,3.15);
     arc(x+35,y+60,70,70,0,3.15);
 
-
+    if (comiendo){
+        text("🍔", random(width+430),random(height+430));
+        textSize(150);
+    }
 
 }
+
+function activarcomiendo(){
+    comiendo = true;
+}
+
+function nocomer(){
+    comiendo = false;
+}
+
+function activarMovimiento() {
+    jugando = true;
+}
+
+function volverAlCentro() {
+    x = 430; 
+    y = 430; 
+    jugando = false;
+}
+
+function activarNoche(){
+    durmiendo = true;
+}
+
+function dia(){
+    cat_color = [255,255,0];
+    eyes = 50;
+    durmiendo = false;
+}
+
 
 
 
